@@ -1,6 +1,7 @@
 Partie Théorique : 
 
-1-	interface RandomInterface {
+1-	
+	interface RandomInterface {
   		public function login($user, $password);
   	}
  
@@ -9,7 +10,8 @@ Partie Théorique :
   		}
 	}
 
-2- 	class Exemple {
+2- 	
+	class Exemple {
   		__construct(){
 			//on crée l'objet
   		}
