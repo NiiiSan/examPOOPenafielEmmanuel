@@ -1,4 +1,4 @@
-Partie Théorique : 
+Partie Théorique! : 
 
 1-	
 	interface RandomInterface {
