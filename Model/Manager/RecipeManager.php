@@ -11,7 +11,7 @@ class RecipeManager extends DbManager{
         $recipes = [];
         $sql =  'SELECT * FROM recipes ORDER BY id';
         foreach  ($this->bdd->query($sql) as $row) {
-            $articles[] = new Recipe($row['id'], $row['title'], $row['ingredients'], $row['content'], $row['image']);
+            $recipes[] = new Recipe($row['id'], $row['title'], $row['ingredients'], $row['content'], $row['image']);
         }
         return $recipes;
     }
@@ -33,7 +33,7 @@ class RecipeManager extends DbManager{
         $image = $recipe->getImage();
         $request = $this->bdd->prepare("INSERT INTO recipes (title, ingredients, content, image) VALUES (?,?,?,?)");
         $request->bindParam(1, $title);
-        $request->bindParam(2, $ingredientsu);
+        $request->bindParam(2, $ingredients);
         $request->bindParam(3, $content);
         $request->bindParam(4, $image);
         $request->execute();
@@ -55,8 +55,8 @@ class RecipeManager extends DbManager{
 
     public function delete(){
         $request = $this->bdd->prepare("DELETE FROM recipes WHERE id =?");
-        $request->bindParam(1,$id);
-        $request->execute;
+        $request->bindParam(1, $id);
+        $request->execute();
     }   
 
 }

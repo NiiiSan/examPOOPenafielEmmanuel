@@ -24,6 +24,7 @@
 
         <tbody>
             <?php
+                var_dump($recipes);
                 foreach ($recipes as $rec) {
                     ?>
                     <tr>
@@ -31,10 +32,14 @@
                         <td><?php echo $rec->getTitle()?></td>
                         <td><?php echo $rec->getIngredients()?></td>
                         <td><?php echo $rec->getContent()?></td>
-                        <td><?php echo $rec->getImage()?></td>
-                        <td>
-                            <a href="../examPOOEmmanuelPenafiel/index.php?controller=recipe&action=delete&id=<?php echo $art->getId()?>">Supprimer</a>
-                            <a href="../examPOOEmmanuelPenafiel/index.php?controller=recipe&action=updateForm&id=<?php echo $art->getId()?>">Modifier</a>
+                        <td><?php echo "<img src=".$rec->getImage()." alt='' width='300' height='300'/>"?></td>
+                        <td> 
+                            <a href="../examPOOEmmanuelPenafiel/index.php?controller=recipe&action=updateForm&id=<?php echo $rec->getId()?>">
+                                <button style="margin-bottom:10px;" class="btn btn-warning">Modifier
+                            </a>
+                            <a href="../examPOOEmmanuelPenafiel/index.php?controller=recipe&action=delete&id=<?php echo $rec->getId()?>">
+                                <button style="margin-bottom:10px;" class="btn btn-danger">Supprimer
+                            </a>
                         </td>
                     </tr>
                     <?php

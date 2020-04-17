@@ -5,23 +5,23 @@
         $recipeController = new DefaultController();
         $recipeController->home();
     }
-    else if($_GET['controller'] === 'article' && $_GET['action'] === 'addForm'){
+    else if($_GET['controller'] === 'recipe' && $_GET['action'] === 'addForm'){
         $recipeController = new RecipeController();
         $recipeController->addForm();
     }
-    else if($_GET['controller'] === 'article' && $_GET['action'] === 'addRecipe'){
+    else if($_GET['controller'] === 'recipe' && $_GET['action'] === 'addRecipe'){
         $recipeController = new RecipeController();
         $recipeController->addRecipe();
     }
-    else if($_GET['controller'] === 'article' && $_GET['action'] === 'updateForm' && isset($_GET['id'])){
+    else if($_GET['controller'] === 'recipe' && $_GET['action'] === 'updateForm' && isset($_GET['id'])){
         $recipeController = new RecipeController();
         $recipeController->updateForm($_GET['id']);
     }
-    else if($_GET['controller'] === 'article' && $_GET['action'] === 'updateRecipe' && isset($_GET['id'])){
+    else if($_GET['controller'] === 'recipe' && $_GET['action'] === 'updateRecipe' && isset($_GET['id'])){
         $recipeController = new RecipeController();
         $recipeController->updateRecipe($_GET['id']);
     }
-    else if($_GET['controller'] === 'article' && $_GET['action'] === 'delete' && isset($_GET['id'])){
+    else if($_GET['controller'] === 'recipe' && $_GET['action'] === 'delete' && isset($_GET['id'])){
         $recipeController = new RecipeController();
         $recipeController->delete($_GET['id']);
     }
