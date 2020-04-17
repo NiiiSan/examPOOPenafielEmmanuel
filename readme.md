@@ -60,6 +60,6 @@ Partie Théorique :
 
 8 - 9 - le MVC nous permet d'organiser notre code de façon très propre et pratique, le tout étant séparé en 3 parties : 
 	- View : tout ce qui sera affiché (contient donc tous les scripts html)
-	- Model : qui contiendra nos classes et nos requetes SQL (c'est le crew des objets et des requetes SQL)
+	- Model : qui contiendra nos classes et nos requetes SQL (c'est le crew des objets et de la DB)
 	- Controller : qui réunira toutes les fonctions ~~et les trucs compliqués ^^~~
 
