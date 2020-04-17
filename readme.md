@@ -23,12 +23,12 @@ Partie Théorique :
 	}
 
 	class Exemple {
-    		public function __set($name,$value){
+    	public function __set($name,$value){
 			//on essaie d'attribuer une valeur à un attribut dont on a pas l'accès ou qui n'existe pas
-    		}
-    		public function __get($name){
+    	}
+    	public function __get($name){
 			//on cherche à obtenir la valeur d'un attribut dont on a pas l'accès (privé ou protected ou qui n'existe pas)
-    		}
+    	}
   	}
 
 	class Exemple {
